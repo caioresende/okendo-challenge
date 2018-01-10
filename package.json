@@ -1,0 +1,17 @@
+{
+  "name": "okendo-challenge",
+  "version": "1.0.0",
+  "description": "This implements a simple stepper page with interactions related to product rating and reviewing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Caio Resende",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.8"
+  }
+}
