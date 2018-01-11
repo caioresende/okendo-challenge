@@ -43,6 +43,7 @@ nav {
 
 nav .nav-item {
     margin: 0;
+    outline: 0;
     color: gray;
 }
 
@@ -153,7 +154,8 @@ form {
     max-width: 100%;
     border: solid 1px rgb(235,235,235);
     font-size: 0.8em;
-    font-family: Open Sans
+    font-family: Open Sans;
+    outline: 0;
 }
 
 /* GRADE */
