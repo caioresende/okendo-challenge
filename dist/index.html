@@ -1,0 +1,29 @@
+<html ng-app="OkendoChallenge" ng-controller="MainController as main">
+    <head>
+        <title>{{main.data.currentStep.name}}</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1 class="product-name">{{main.data.product}}</h1>
+                <h2 class="current-step">{{main.data.currentStep.name}}</h2>
+                <nav  ng-controller="NavController as nav">
+                    <div class="nav-item" ng-repeat="step in nav.data.steps" ng-class="{'current': nav.data.currentStep.name === step.name, 'complete':  step.isComplete}" ng-click="nav.changeSteps(step)">
+                        <div class="bullet-step"></div>
+                        {{step.name}}
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div id="main" class="container" ui-view></div>
+        </main>
+        <footer>
+            <div class="container">
+                    <button id="main-button" ng-click="main.changeStep()" ng-disabled="main.data.currentStep.name === main.data.steps[main.data.steps.length - 3].name">Next</button>
+            </div>
+        </footer>
+        <script src="bundle.js"></script>
+    </body>
+</html>
