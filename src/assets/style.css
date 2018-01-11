@@ -1,0 +1,259 @@
+body {
+    background: rgb(244,244,244);
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background: white;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+    text-align: center;
+    height: 135px;
+}
+
+.container {
+    width: 750px !important;
+    height: auto;
+    margin: 0 auto;
+}
+
+.product-name {
+    color: gray;
+    padding: 20px 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.current-step {
+    margin: 0;
+    padding: 0 0 20px 0;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+nav .nav-item {
+    margin: 0;
+    color: gray;
+}
+
+.nav-item .bullet-step {
+    margin: 0 auto 10px auto;
+    width: 30px;
+    height: 30px;
+    background:white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 50%;
+}
+
+.nav-item.current .bullet-step, .nav-item.complete .bullet-step {
+    background: rgb(146, 188,79);
+}
+
+.nav-item.complete .bullet-step::before {
+    content: "\2713";
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.nav-item.current {
+    color: black;
+}
+
+/* MAIN CONTENT STYLING */
+
+#main {
+    width: 100%;
+    margin: 80px auto;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+/* QUESTIONS */
+
+form {
+    margin: 0;
+    padding: 24px;
+}
+
+.question-container {
+    width: 100%;
+    margin-top: 36px;
+}
+
+.question-container:first-child {
+    margin-top: 0;
+}
+
+.question-title {
+    margin: 0;
+    padding: 0 0 12px 0;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.question-caption {
+    padding: 0 0 12px 0;
+    margin: 0;
+    font-size: 0.8em;
+    font-weight: 100;
+    color: gray;
+}
+
+/* STARS */
+
+.rating-input
+{
+    display: table;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.rating-input input
+{
+    display: none;
+}
+
+.rating-input label::before
+{
+    content: "\2605";
+    padding: 5px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.rating-input label
+{
+    color: #ccc;
+}
+
+.rating-input input:checked ~ label
+{
+    color: rgb(245, 179, 1);
+    transition: all 0.3s ease;
+}
+
+/* TEXTAREA */
+
+.textarea-input textarea {
+    width: 100%;
+    height: 140px;
+    max-width: 100%;
+    border: solid 1px rgb(235,235,235);
+    font-size: 0.8em;
+    font-family: Open Sans
+}
+
+/* GRADE */
+
+.grade-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.grade-input {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    z-index: 10;
+    position: relative;
+}
+
+.grade-option input {
+    display: none;
+}
+
+.grade-option {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background:rgb(235,235,235);
+    padding: 5px;
+    display: table;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: 0;
+}
+
+.grade-option:hover, .select-multiple:hover {
+    box-shadow: 0 0px 4px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+.grade-option.checked, .select-multiple.checked
+{
+    background: rgb(146, 188,79);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.grade-input-progress {
+    width: 100%;
+    height: 4px;
+    margin: -19px 0 0 0;
+    z-index: 5;
+    position: relative;
+    -webkit-appearance: none;
+	border: none;
+}
+
+.grade-input-progress::-webkit-progress-bar {
+    background:rgb(235,235,235);
+}
+.grade-input-progress::-webkit-progress-value {
+    background: rgb(146, 188,79);
+    transition: all 0.3s ease;
+}
+
+/* MULTIPLE SELECT */
+
+.multiple-input {
+    display: flex;
+    flex-direction: row;
+}
+.select-multiple {
+    background:rgb(235,235,235);
+    padding: 12px;
+    margin: 0 12px 0 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.select-multiple:active {
+    color: black;
+}
+
+.select-multiple:disabled, #main-button:disabled {
+    cursor: not-allowed;
+    background:rgb(235,235,235);
+    color: gray;
+    box-shadow: 0 0 0;
+}
+
+/* FOOTER */
+
+#main-button {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    background: rgb(146, 188,79);
+    font-size: 1.2em;
+    color: white;
+    border-radius: 4px;
+}
