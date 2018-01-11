@@ -4,14 +4,26 @@
   "description": "This implements a simple stepper page with interactions related to product rating and reviewing",
   "main": "index.js",
   "scripts": {
+    "start:dev": "webpack-dev-server",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Caio Resende",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^3.10.0"
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.8",
+    "html-loader": "^0.5.4",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
   },
   "dependencies": {
-    "angular": "^1.6.8"
+    "@uirouter/angularjs": "^1.0.12",
+    "angular": "^1.6.8",
+    "angular-animate": "^1.6.8",
+    "angular-aria": "^1.6.8",
+    "angular-messages": "^1.6.8",
+    "lodash": "^4.17.4"
   }
 }
