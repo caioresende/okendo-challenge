@@ -1,0 +1,32 @@
+<form name="review.form">
+    <div ng-repeat="question in review.data.currentQuestions track by $index" class="question-container">
+        <h4 class="question-title">{{question.title}}</h6>
+        <p class="question-caption" ng-if="question.caption">{{question.caption}}</p>
+        <div ng-if="question.type === 'RATING'" class="rating-input">
+            <input type="radio" name="group-2" id="group-2-0" ng-value="5" ng-model="question.answer"/><label for="group-2-0"></label>
+            <input type="radio" name="group-2" id="group-2-1" ng-value="4" ng-model="question.answer"/><label for="group-2-1"></label>
+            <input type="radio" name="group-2" id="group-2-2" ng-value="3" ng-model="question.answer"/><label for="group-2-2"></label>
+            <input type="radio" name="group-2" id="group-2-3" ng-value="2" ng-model="question.answer"/><label for="group-2-3"></label>
+            <input type="radio" name="group-2" id="group-2-4" ng-value="1" ng-model="question.answer"/><label for="group-2-4"></label>
+        </div>
+        <div ng-if="question.type === 'TEXT_AREA'" class="textarea-input">
+            <textarea ng-model="question.answer"></textarea>
+        </div>
+        <div class="grade-input-container" ng-if="question.type === 'GRADE'" >
+            <div class="grade-input">
+                <div ng-class="{'checked': question.answer >= option}" ng-repeat="option in question.options track by $index" class="grade-option" ng-click="question.answer = $index + 1">
+                    {{option}}    
+                </div>
+            </div>
+            <progress class="grade-input-progress" value="{{question.answer - 1}}" max="{{question.options.length - 1}}"></progress>
+        </div>
+        <div ng-if="question.type === 'MULTIPLE_OPTIONS'" class="multiple-input">
+            <button ng-disabled="question.answer.length == question.max_options && question.answer.indexOf(option) < 0" ng-class="{'checked': question.answer.indexOf(option) > -1}" class="select-multiple" ng-repeat="option in question.options" ng-click="review.checkQuestionOptions(question, option)">{{option}}</button>
+        </div>
+        <div ng-if="question.type === 'SELECT'" class="">
+            <select ng-model="question.answer">
+                <option ng-repeat="option in question.options">{{option}}</button>
+            </select>
+        </div>
+    </div>
+</form>
