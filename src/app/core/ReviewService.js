@@ -27,7 +27,7 @@ module.exports = function() {
     this.questions = [
         {
             title: 'Rating',
-            caption: 'How many starts would you give to ',
+            caption: 'How many starts would you give to the product',
             type: 'RATING',
             options: [],
             answer: '',
@@ -35,7 +35,7 @@ module.exports = function() {
         },
         {
             title: 'Comments',
-            caption: 'Would you like to leave a comment about your experience with ',
+            caption: 'Would you like to leave a comment about your experience with the product ',
             type: 'TEXT_AREA',
             options: [],
             answer: '',
