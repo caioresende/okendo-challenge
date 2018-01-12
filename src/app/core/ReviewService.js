@@ -125,7 +125,7 @@ module.exports = function() {
         var isCompleted = true;
 
         for (var i = 0; i < self.questions.length; i++) {
-            if (self.questions[i].step === self.currentStep.name && !self.questions[i].answer) {
+            if (self.questions[i].step === self.currentStep.name && (!self.questions[i].answer || self.questions[i].answer.length === 0)) {
                 isCompleted = false;
             }
         }

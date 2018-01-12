@@ -24,8 +24,8 @@
             <button ng-disabled="question.answer.length == question.max_options && question.answer.indexOf(option) < 0" ng-class="{'checked': question.answer.indexOf(option) > -1}" class="select-multiple" ng-repeat="option in question.options" ng-click="review.checkQuestionOptions(question, option)">{{option}}</button>
         </div>
         <div ng-if="question.type === 'SELECT'" class="">
-            <select ng-model="question.answer">
-                <option ng-repeat="option in question.options">{{option}}</button>
+            <select ng-model="question.answer" class="select-input">
+                <option ng-repeat="option in question.options" ng-value="option">{{option}}</button>
             </select>
         </div>
     </div>
