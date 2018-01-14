@@ -2,7 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/index.js', './src/assets/style.scss'],
+  entry: ['./src/index.js', './src/assets/main.scss'],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
