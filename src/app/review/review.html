@@ -1,7 +1,7 @@
-<form name="review.form">
+<form name="review.form" class="no-margin">
     <div ng-repeat="question in review.data.currentQuestions track by $index" class="question-container">
-        <h4 class="question-title">{{question.title}}</h6>
-        <p class="question-caption" ng-if="question.caption">{{question.caption}}</p>
+        <h4 class="question-title default-padding no-margin">{{question.title}}</h6>
+        <p class="question-caption default-padding no-margin" ng-if="question.caption">{{question.caption}}</p>
         <div ng-if="question.type === 'RATING'" class="rating-input">
             <input type="radio" name="group-2" id="group-2-0" ng-value="5" ng-model="question.answer"/><label for="group-2-0"></label>
             <input type="radio" name="group-2" id="group-2-1" ng-value="4" ng-model="question.answer"/><label for="group-2-1"></label>
@@ -14,7 +14,7 @@
         </div>
         <div class="grade-input-container" ng-if="question.type === 'GRADE'" >
             <div class="grade-input">
-                <div ng-class="{'checked': question.answer >= option}" ng-repeat="option in question.options track by $index" class="grade-option" ng-click="question.answer = $index + 1">
+                <div ng-class="{'checked': question.answer >= option}" ng-repeat="option in question.options track by $index" class="grade-option align-center-text" ng-click="question.answer = $index + 1">
                     {{option}}    
                 </div>
             </div>
