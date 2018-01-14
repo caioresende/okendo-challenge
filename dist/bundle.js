@@ -628,7 +628,7 @@ exports.silentRejection = function (error) {
     return exports.silenceUncaughtInPromise(coreservices_1.services.$q.reject(error));
 };
 //# sourceMappingURL=common.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(68)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(64)))
 
 /***/ }),
 /* 1 */
@@ -4506,21 +4506,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var interface_1 = __webpack_require__(7);
 var transition_1 = __webpack_require__(14);
 var hookRegistry_1 = __webpack_require__(21);
-var coreResolvables_1 = __webpack_require__(73);
-var redirectTo_1 = __webpack_require__(74);
-var onEnterExitRetain_1 = __webpack_require__(75);
-var resolve_1 = __webpack_require__(76);
-var views_1 = __webpack_require__(77);
-var updateGlobals_1 = __webpack_require__(78);
-var url_1 = __webpack_require__(79);
+var coreResolvables_1 = __webpack_require__(69);
+var redirectTo_1 = __webpack_require__(70);
+var onEnterExitRetain_1 = __webpack_require__(71);
+var resolve_1 = __webpack_require__(72);
+var views_1 = __webpack_require__(73);
+var updateGlobals_1 = __webpack_require__(74);
+var url_1 = __webpack_require__(75);
 var lazyLoad_1 = __webpack_require__(43);
 var transitionEventType_1 = __webpack_require__(44);
 var transitionHook_1 = __webpack_require__(11);
 var predicates_1 = __webpack_require__(1);
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
-var ignoredTransition_1 = __webpack_require__(80);
-var invalidTransition_1 = __webpack_require__(81);
+var ignoredTransition_1 = __webpack_require__(76);
+var invalidTransition_1 = __webpack_require__(77);
 /**
  * The default [[Transition]] options.
  *
@@ -4801,7 +4801,7 @@ exports.locationPluginFactory = locationPluginFactory;
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(59);
+__webpack_require__(55);
 module.exports = angular;
 
 
@@ -8206,633 +8206,41 @@ exports.BrowserLocationConfig = BrowserLocationConfig;
 
 /***/ }),
 /* 52 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_style_css__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__assets_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_js__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__app_app_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_index_html__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_index_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__app_index_html__);
-
-
+__webpack_require__(53);
+module.exports = __webpack_require__(93);
 
 
 /***/ }),
 /* 53 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_app_js__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_app_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__app_app_js__);
 
-// load the styles
-var content = __webpack_require__(54);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(56)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!./style.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!./style.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ }),
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(55)(false);
-// imports
-
-
-// module
-exports.push([module.i, "body {\n    background: rgb(244,244,244);\n    margin: 0;\n    padding: 0;\n    font-family: 'Open Sans', sans-serif;\n}\n\nheader {\n    background: white;\n    box-shadow: 0 3px 3px rgba(0,0,0,0.1);\n    text-align: center;\n    height: 135px;\n}\n\n.container {\n    width: 750px !important;\n    height: auto;\n    margin: 0 auto;\n}\n\n.product-name {\n    color: gray;\n    padding: 20px 0;\n    margin: 0;\n    text-transform: uppercase;\n    font-weight: 500;\n    font-size: 1.2em;\n}\n\n.current-step {\n    margin: 0;\n    padding: 0 0 20px 0;\n    font-weight: 500;\n    font-size: 1.5em;\n}\n\nnav {\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    flex-direction: row;\n}\n\nnav .nav-item {\n    margin: 0;\n    outline: 0;\n    color: gray;\n}\n\n.nav-item .bullet-step {\n    margin: 0 auto 10px auto;\n    width: 30px;\n    height: 30px;\n    background:white;\n    box-shadow: 0 0 5px rgba(0,0,0,0.2);\n    border-radius: 50%;\n}\n\n.nav-item.current .bullet-step, .nav-item.complete .bullet-step {\n    background: rgb(146, 188,79);\n}\n\n.nav-item.complete .bullet-step::before {\n    content: \"\\2713\";\n    color: white;\n    text-align: center;\n    font-weight: 700;\n    font-size: 1.3em;\n}\n\n.nav-item.current {\n    color: black;\n}\n\n/* MAIN CONTENT STYLING */\n\n#main {\n    width: 100%;\n    margin: 80px auto;\n    background: white;\n    border-radius: 6px;\n    box-shadow: 0 0 4px rgba(0,0,0,0.1);\n}\n\n/* QUESTIONS */\n\nform {\n    margin: 0;\n    padding: 24px;\n}\n\n.question-container {\n    width: 100%;\n    margin-top: 36px;\n}\n\n.question-container:first-child {\n    margin-top: 0;\n}\n\n.question-title {\n    margin: 0;\n    padding: 0 0 12px 0;\n    font-size: 0.9em;\n    font-weight: 500;\n}\n\n.question-caption {\n    padding: 0 0 12px 0;\n    margin: 0;\n    font-size: 0.8em;\n    font-weight: 100;\n    color: gray;\n}\n\n/* STARS */\n\n.rating-input\n{\n    display: table;\n    unicode-bidi: bidi-override;\n    direction: rtl;\n}\n\n.rating-input input\n{\n    display: none;\n}\n\n.rating-input label::before\n{\n    content: \"\\2605\";\n    padding: 5px;\n    text-align: center;\n    font-size: 2em;\n}\n\n.rating-input label\n{\n    color: #ccc;\n}\n\n.rating-input input:checked ~ label\n{\n    color: rgb(245, 179, 1);\n    transition: all 0.3s ease;\n}\n\n/* TEXTAREA */\n\n.textarea-input textarea {\n    width: 100%;\n    height: 140px;\n    max-width: 100%;\n    border: solid 1px rgb(235,235,235);\n    font-size: 0.8em;\n    font-family: Open Sans;\n    outline: 0;\n}\n\n/* GRADE */\n\n.grade-input-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.grade-input {\n    display: flex;\n    justify-content: space-between;\n    flex-direction: row;\n    z-index: 10;\n    position: relative;\n}\n\n.grade-option input {\n    display: none;\n}\n\n.grade-option {\n    width: 24px;\n    height: 24px;\n    border-radius: 50%;\n    background:rgb(235,235,235);\n    padding: 5px;\n    display: table;\n    text-align: center;\n    transition: all 0.3s ease;\n    cursor: pointer;\n    outline: 0;\n}\n\n.grade-option:hover, .select-multiple:hover {\n    box-shadow: 0 0px 4px rgba(0,0,0,0.2);\n    transition: all 0.2s ease;\n}\n\n.grade-option.checked, .select-multiple.checked\n{\n    background: rgb(146, 188,79);\n    color: white;\n    transition: all 0.3s ease;\n}\n\n.grade-input-progress {\n    width: 100%;\n    height: 4px;\n    margin: -19px 0 0 0;\n    z-index: 5;\n    position: relative;\n    -webkit-appearance: none;\n\tborder: none;\n}\n\n.grade-input-progress::-webkit-progress-bar {\n    background:rgb(235,235,235);\n}\n.grade-input-progress::-webkit-progress-value {\n    background: rgb(146, 188,79);\n    transition: all 0.3s ease;\n}\n\n/* MULTIPLE SELECT */\n\n.multiple-input {\n    display: flex;\n    flex-direction: row;\n}\n.select-multiple {\n    background:rgb(235,235,235);\n    padding: 12px;\n    margin: 0 12px 0 0;\n    border: none;\n    border-radius: 4px;\n    font-size: 0.8em;\n    cursor: pointer;\n}\n\n.select-multiple:active {\n    color: black;\n}\n\n.select-multiple:disabled, #main-button:disabled {\n    cursor: not-allowed;\n    background:rgb(235,235,235);\n    color: gray;\n    box-shadow: 0 0 0;\n}\n\n/* FOOTER */\n\n#main-button {\n    width: 100%;\n    padding: 10px;\n    text-align: center;\n    border: none;\n    background: rgb(146, 188,79);\n    font-size: 1.2em;\n    color: white;\n    border-radius: 4px;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 55 */
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-
-var stylesInDom = {};
-
-var	memoize = function (fn) {
-	var memo;
-
-	return function () {
-		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-		return memo;
-	};
-};
-
-var isOldIE = memoize(function () {
-	// Test for IE <= 9 as proposed by Browserhacks
-	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-	// Tests for existence of standard globals is to allow style-loader
-	// to operate correctly into non-standard environments
-	// @see https://github.com/webpack-contrib/style-loader/issues/177
-	return window && document && document.all && !window.atob;
-});
-
-var getElement = (function (fn) {
-	var memo = {};
-
-	return function(selector) {
-		if (typeof memo[selector] === "undefined") {
-			var styleTarget = fn.call(this, selector);
-			// Special case to return head of iframe instead of iframe itself
-			if (styleTarget instanceof window.HTMLIFrameElement) {
-				try {
-					// This will throw an exception if access to iframe is blocked
-					// due to cross-origin restrictions
-					styleTarget = styleTarget.contentDocument.head;
-				} catch(e) {
-					styleTarget = null;
-				}
-			}
-			memo[selector] = styleTarget;
-		}
-		return memo[selector]
-	};
-})(function (target) {
-	return document.querySelector(target)
-});
-
-var singleton = null;
-var	singletonCounter = 0;
-var	stylesInsertedAtTop = [];
-
-var	fixUrls = __webpack_require__(57);
-
-module.exports = function(list, options) {
-	if (typeof DEBUG !== "undefined" && DEBUG) {
-		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-	}
-
-	options = options || {};
-
-	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
-
-	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-	// tags it will allow on a page
-	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
-
-	// By default, add <style> tags to the <head> element
-	if (!options.insertInto) options.insertInto = "head";
-
-	// By default, add <style> tags to the bottom of the target
-	if (!options.insertAt) options.insertAt = "bottom";
-
-	var styles = listToStyles(list, options);
-
-	addStylesToDom(styles, options);
-
-	return function update (newList) {
-		var mayRemove = [];
-
-		for (var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-
-			domStyle.refs--;
-			mayRemove.push(domStyle);
-		}
-
-		if(newList) {
-			var newStyles = listToStyles(newList, options);
-			addStylesToDom(newStyles, options);
-		}
-
-		for (var i = 0; i < mayRemove.length; i++) {
-			var domStyle = mayRemove[i];
-
-			if(domStyle.refs === 0) {
-				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
-
-				delete stylesInDom[domStyle.id];
-			}
-		}
-	};
-};
-
-function addStylesToDom (styles, options) {
-	for (var i = 0; i < styles.length; i++) {
-		var item = styles[i];
-		var domStyle = stylesInDom[item.id];
-
-		if(domStyle) {
-			domStyle.refs++;
-
-			for(var j = 0; j < domStyle.parts.length; j++) {
-				domStyle.parts[j](item.parts[j]);
-			}
-
-			for(; j < item.parts.length; j++) {
-				domStyle.parts.push(addStyle(item.parts[j], options));
-			}
-		} else {
-			var parts = [];
-
-			for(var j = 0; j < item.parts.length; j++) {
-				parts.push(addStyle(item.parts[j], options));
-			}
-
-			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-		}
-	}
-}
-
-function listToStyles (list, options) {
-	var styles = [];
-	var newStyles = {};
-
-	for (var i = 0; i < list.length; i++) {
-		var item = list[i];
-		var id = options.base ? item[0] + options.base : item[0];
-		var css = item[1];
-		var media = item[2];
-		var sourceMap = item[3];
-		var part = {css: css, media: media, sourceMap: sourceMap};
-
-		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
-		else newStyles[id].parts.push(part);
-	}
-
-	return styles;
-}
-
-function insertStyleElement (options, style) {
-	var target = getElement(options.insertInto)
-
-	if (!target) {
-		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
-	}
-
-	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
-
-	if (options.insertAt === "top") {
-		if (!lastStyleElementInsertedAtTop) {
-			target.insertBefore(style, target.firstChild);
-		} else if (lastStyleElementInsertedAtTop.nextSibling) {
-			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
-		} else {
-			target.appendChild(style);
-		}
-		stylesInsertedAtTop.push(style);
-	} else if (options.insertAt === "bottom") {
-		target.appendChild(style);
-	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
-		var nextSibling = getElement(options.insertInto + " " + options.insertAt.before);
-		target.insertBefore(style, nextSibling);
-	} else {
-		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
-	}
-}
-
-function removeStyleElement (style) {
-	if (style.parentNode === null) return false;
-	style.parentNode.removeChild(style);
-
-	var idx = stylesInsertedAtTop.indexOf(style);
-	if(idx >= 0) {
-		stylesInsertedAtTop.splice(idx, 1);
-	}
-}
-
-function createStyleElement (options) {
-	var style = document.createElement("style");
-
-	options.attrs.type = "text/css";
-
-	addAttrs(style, options.attrs);
-	insertStyleElement(options, style);
-
-	return style;
-}
-
-function createLinkElement (options) {
-	var link = document.createElement("link");
-
-	options.attrs.type = "text/css";
-	options.attrs.rel = "stylesheet";
-
-	addAttrs(link, options.attrs);
-	insertStyleElement(options, link);
-
-	return link;
-}
-
-function addAttrs (el, attrs) {
-	Object.keys(attrs).forEach(function (key) {
-		el.setAttribute(key, attrs[key]);
-	});
-}
-
-function addStyle (obj, options) {
-	var style, update, remove, result;
-
-	// If a transform function was defined, run it on the css
-	if (options.transform && obj.css) {
-	    result = options.transform(obj.css);
-
-	    if (result) {
-	    	// If transform returns a value, use that instead of the original css.
-	    	// This allows running runtime transformations on the css.
-	    	obj.css = result;
-	    } else {
-	    	// If the transform function returns a falsy value, don't add this css.
-	    	// This allows conditional loading of css
-	    	return function() {
-	    		// noop
-	    	};
-	    }
-	}
-
-	if (options.singleton) {
-		var styleIndex = singletonCounter++;
-
-		style = singleton || (singleton = createStyleElement(options));
-
-		update = applyToSingletonTag.bind(null, style, styleIndex, false);
-		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-
-	} else if (
-		obj.sourceMap &&
-		typeof URL === "function" &&
-		typeof URL.createObjectURL === "function" &&
-		typeof URL.revokeObjectURL === "function" &&
-		typeof Blob === "function" &&
-		typeof btoa === "function"
-	) {
-		style = createLinkElement(options);
-		update = updateLink.bind(null, style, options);
-		remove = function () {
-			removeStyleElement(style);
-
-			if(style.href) URL.revokeObjectURL(style.href);
-		};
-	} else {
-		style = createStyleElement(options);
-		update = applyToTag.bind(null, style);
-		remove = function () {
-			removeStyleElement(style);
-		};
-	}
-
-	update(obj);
-
-	return function updateStyle (newObj) {
-		if (newObj) {
-			if (
-				newObj.css === obj.css &&
-				newObj.media === obj.media &&
-				newObj.sourceMap === obj.sourceMap
-			) {
-				return;
-			}
-
-			update(obj = newObj);
-		} else {
-			remove();
-		}
-	};
-}
-
-var replaceText = (function () {
-	var textStore = [];
-
-	return function (index, replacement) {
-		textStore[index] = replacement;
-
-		return textStore.filter(Boolean).join('\n');
-	};
-})();
-
-function applyToSingletonTag (style, index, remove, obj) {
-	var css = remove ? "" : obj.css;
-
-	if (style.styleSheet) {
-		style.styleSheet.cssText = replaceText(index, css);
-	} else {
-		var cssNode = document.createTextNode(css);
-		var childNodes = style.childNodes;
-
-		if (childNodes[index]) style.removeChild(childNodes[index]);
-
-		if (childNodes.length) {
-			style.insertBefore(cssNode, childNodes[index]);
-		} else {
-			style.appendChild(cssNode);
-		}
-	}
-}
-
-function applyToTag (style, obj) {
-	var css = obj.css;
-	var media = obj.media;
-
-	if(media) {
-		style.setAttribute("media", media)
-	}
-
-	if(style.styleSheet) {
-		style.styleSheet.cssText = css;
-	} else {
-		while(style.firstChild) {
-			style.removeChild(style.firstChild);
-		}
-
-		style.appendChild(document.createTextNode(css));
-	}
-}
-
-function updateLink (link, options, obj) {
-	var css = obj.css;
-	var sourceMap = obj.sourceMap;
-
-	/*
-		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
-		and there is no publicPath defined then lets turn convertToAbsoluteUrls
-		on by default.  Otherwise default to the convertToAbsoluteUrls option
-		directly
-	*/
-	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
-
-	if (options.convertToAbsoluteUrls || autoFixUrls) {
-		css = fixUrls(css);
-	}
-
-	if (sourceMap) {
-		// http://stackoverflow.com/a/26603875
-		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-	}
-
-	var blob = new Blob([css], { type: "text/css" });
-
-	var oldSrc = link.href;
-
-	link.href = URL.createObjectURL(blob);
-
-	if(oldSrc) URL.revokeObjectURL(oldSrc);
-}
-
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports) {
-
-
-/**
- * When source maps are enabled, `style-loader` uses a link element with a data-uri to
- * embed the css on the page. This breaks all relative urls because now they are relative to a
- * bundle instead of the current page.
- *
- * One solution is to only use full urls, but that may be impossible.
- *
- * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
- *
- * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
- *
- */
-
-module.exports = function (css) {
-  // get current location
-  var location = typeof window !== "undefined" && window.location;
-
-  if (!location) {
-    throw new Error("fixUrls requires window.location");
-  }
-
-	// blank or null?
-	if (!css || typeof css !== "string") {
-	  return css;
-  }
-
-  var baseUrl = location.protocol + "//" + location.host;
-  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
-
-	// convert each url(...)
-	/*
-	This regular expression is just a way to recursively match brackets within
-	a string.
-
-	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
-	   (  = Start a capturing group
-	     (?:  = Start a non-capturing group
-	         [^)(]  = Match anything that isn't a parentheses
-	         |  = OR
-	         \(  = Match a start parentheses
-	             (?:  = Start another non-capturing groups
-	                 [^)(]+  = Match anything that isn't a parentheses
-	                 |  = OR
-	                 \(  = Match a start parentheses
-	                     [^)(]*  = Match anything that isn't a parentheses
-	                 \)  = Match a end parentheses
-	             )  = End Group
-              *\) = Match anything and then a close parens
-          )  = Close non-capturing group
-          *  = Match anything
-       )  = Close capturing group
-	 \)  = Match a close parens
-
-	 /gi  = Get all matches, not the first.  Be case insensitive.
-	 */
-	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
-		// strip quotes (if they exist)
-		var unquotedOrigUrl = origUrl
-			.trim()
-			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
-			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
-
-		// already a full url? no change
-		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(unquotedOrigUrl)) {
-		  return fullMatch;
-		}
-
-		// convert the url to a full url
-		var newUrl;
-
-		if (unquotedOrigUrl.indexOf("//") === 0) {
-		  	//TODO: should we add protocol?
-			newUrl = unquotedOrigUrl;
-		} else if (unquotedOrigUrl.indexOf("/") === 0) {
-			// path should be relative to the base url
-			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
-		} else {
-			// path should be relative to current directory
-			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
-		}
-
-		// send back the fixed url(...)
-		return "url(" + JSON.stringify(newUrl) + ")";
-	});
-
-	// send back the fixed css
-	return fixedCss;
-};
-
-
-/***/ }),
-/* 58 */
-/***/ (function(module, exports, __webpack_require__) {
-
 __webpack_require__(26);
 
 angular.module('OkendoChallenge', [
+  __webpack_require__(56),
+  __webpack_require__(58),
   __webpack_require__(60),
-  __webpack_require__(62),
-  __webpack_require__(64),
-  __webpack_require__(66).default,
-  __webpack_require__(89),
-  __webpack_require__(91)
+  __webpack_require__(62).default,
+  __webpack_require__(85),
+  __webpack_require__(87)
 ])
 
-.config(__webpack_require__(95));
+.config(__webpack_require__(91));
 
 /***/ }),
-/* 59 */
+/* 55 */
 /***/ (function(module, exports) {
 
 /**
@@ -43092,15 +42500,15 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 60 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(61);
+__webpack_require__(57);
 module.exports = 'ngAria';
 
 
 /***/ }),
-/* 61 */
+/* 57 */
 /***/ (function(module, exports) {
 
 /**
@@ -43507,15 +42915,15 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
 
 
 /***/ }),
-/* 62 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(63);
+__webpack_require__(59);
 module.exports = 'ngAnimate';
 
 
 /***/ }),
-/* 63 */
+/* 59 */
 /***/ (function(module, exports) {
 
 /**
@@ -47679,15 +47087,15 @@ angular.module('ngAnimate', [], function initAngularHelpers() {
 
 
 /***/ }),
-/* 64 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(65);
+__webpack_require__(61);
 module.exports = 'ngMessages';
 
 
 /***/ }),
-/* 65 */
+/* 61 */
 /***/ (function(module, exports) {
 
 /**
@@ -48434,7 +47842,7 @@ function ngMessageDirectiveFactory() {
 
 
 /***/ }),
-/* 66 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -48445,7 +47853,7 @@ function ngMessageDirectiveFactory() {
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 (function (global, factory) {
-	 true ? factory(exports, __webpack_require__(26), __webpack_require__(67)) :
+	 true ? factory(exports, __webpack_require__(26), __webpack_require__(63)) :
 	typeof define === 'function' && define.amd ? define(['exports', 'angular', '@uirouter/core'], factory) :
 	(factory((global['@uirouter/angularjs'] = {}),global.angular,global['@uirouter/core']));
 }(this, (function (exports,ng_from_import,core) { 'use strict';
@@ -50459,7 +49867,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 
 /***/ }),
-/* 67 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50473,21 +49881,21 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(4));
-__export(__webpack_require__(69));
-__export(__webpack_require__(70));
-__export(__webpack_require__(71));
-__export(__webpack_require__(72));
-__export(__webpack_require__(82));
-__export(__webpack_require__(83));
-__export(__webpack_require__(84));
+__export(__webpack_require__(65));
+__export(__webpack_require__(66));
+__export(__webpack_require__(67));
+__export(__webpack_require__(68));
+__export(__webpack_require__(78));
+__export(__webpack_require__(79));
+__export(__webpack_require__(80));
 __export(__webpack_require__(41));
 __export(__webpack_require__(36));
-__export(__webpack_require__(85));
-__export(__webpack_require__(88));
+__export(__webpack_require__(81));
+__export(__webpack_require__(84));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 68 */
+/* 64 */
 /***/ (function(module, exports) {
 
 var g;
@@ -50514,7 +49922,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 69 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50530,7 +49938,7 @@ __export(__webpack_require__(23));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 70 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50545,7 +49953,7 @@ __export(__webpack_require__(15));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 71 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50561,7 +49969,7 @@ __export(__webpack_require__(16));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 72 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50580,7 +49988,7 @@ __export(__webpack_require__(8));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 73 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50604,7 +50012,7 @@ exports.registerAddCoreResolvables = function (transitionService) {
 //# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 74 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50647,7 +50055,7 @@ exports.registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 75 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50710,7 +50118,7 @@ exports.registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 76 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50778,7 +50186,7 @@ exports.registerResolveRemaining = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 77 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50831,7 +50239,7 @@ exports.registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 78 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50872,7 +50280,7 @@ exports.registerUpdateGlobalState = function (transitionService) {
 //# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 79 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50903,7 +50311,7 @@ exports.registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 80 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50940,7 +50348,7 @@ exports.registerIgnoredTransitionHook = function (transitionService) {
 //# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 81 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50965,7 +50373,7 @@ exports.registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 82 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50999,7 +50407,7 @@ __export(__webpack_require__(24));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 83 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51016,7 +50424,7 @@ __export(__webpack_require__(42));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 84 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51029,7 +50437,7 @@ __export(__webpack_require__(40));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 85 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51043,11 +50451,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module vanilla
  */
 /** */
-__export(__webpack_require__(86));
+__export(__webpack_require__(82));
 //# sourceMappingURL=vanilla.js.map
 
 /***/ }),
-/* 86 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51065,11 +50473,11 @@ __export(__webpack_require__(49));
 __export(__webpack_require__(50));
 __export(__webpack_require__(51));
 __export(__webpack_require__(25));
-__export(__webpack_require__(87));
+__export(__webpack_require__(83));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 87 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51104,7 +50512,7 @@ exports.memoryLocationPlugin = utils_1.locationPluginFactory("vanilla.memoryLoca
 //# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 88 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51131,19 +50539,19 @@ exports.UIRouterPluginBase = UIRouterPluginBase;
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 89 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var moduleName = 'OkendoChallenge.Review';
 
 angular
   .module(moduleName, [])
-  .controller('ReviewController', __webpack_require__(90));
+  .controller('ReviewController', __webpack_require__(86));
 
   module.exports = moduleName;
 
 /***/ }),
-/* 90 */
+/* 86 */
 /***/ (function(module, exports) {
 
 module.exports = function(ReviewService) {
@@ -51162,21 +50570,21 @@ module.exports = function(ReviewService) {
 };
 
 /***/ }),
-/* 91 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var moduleName = 'OkendoChallenge.Core';
 
 angular
   .module(moduleName, [])
-  .controller('NavController', __webpack_require__(92))
-  .controller('MainController', __webpack_require__(93))
-  .service('ReviewService', __webpack_require__(94));
+  .controller('NavController', __webpack_require__(88))
+  .controller('MainController', __webpack_require__(89))
+  .service('ReviewService', __webpack_require__(90));
 
   module.exports = moduleName;
 
 /***/ }),
-/* 92 */
+/* 88 */
 /***/ (function(module, exports) {
 
 module.exports = function(ReviewService) {
@@ -51193,7 +50601,7 @@ module.exports = function(ReviewService) {
 };
 
 /***/ }),
-/* 93 */
+/* 89 */
 /***/ (function(module, exports) {
 
 module.exports = function(ReviewService) {
@@ -51215,7 +50623,7 @@ module.exports = function(ReviewService) {
 };
 
 /***/ }),
-/* 94 */
+/* 90 */
 /***/ (function(module, exports) {
 
 module.exports = function() {
@@ -51247,7 +50655,7 @@ module.exports = function() {
     this.questions = [
         {
             title: 'Rating',
-            caption: 'How many starts would you give to ',
+            caption: 'How many starts would you give to the product',
             type: 'RATING',
             options: [],
             answer: '',
@@ -51255,7 +50663,7 @@ module.exports = function() {
         },
         {
             title: 'Comments',
-            caption: 'Would you like to leave a comment about your experience with ',
+            caption: 'Would you like to leave a comment about your experience with the product ',
             type: 'TEXT_AREA',
             options: [],
             answer: '',
@@ -51345,7 +50753,7 @@ module.exports = function() {
         var isCompleted = true;
 
         for (var i = 0; i < self.questions.length; i++) {
-            if (self.questions[i].step === self.currentStep.name && !self.questions[i].answer) {
+            if (self.questions[i].step === self.currentStep.name && (!self.questions[i].answer || self.questions[i].answer.length === 0)) {
                 isCompleted = false;
             }
         }
@@ -51370,7 +50778,7 @@ module.exports = function() {
 };
 
 /***/ }),
-/* 95 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
@@ -51383,22 +50791,22 @@ module.exports = function($stateProvider, $urlRouterProvider, $urlMatcherFactory
     $stateProvider
       .state('main', {
         url: '',
-        template: __webpack_require__(96),
+        template: __webpack_require__(92),
         controller: 'ReviewController as review'
       })
   };
 
 /***/ }),
-/* 96 */
+/* 92 */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"review.form\">\n    <div ng-repeat=\"question in review.data.currentQuestions track by $index\" class=\"question-container\">\n        <h4 class=\"question-title\">{{question.title}}</h6>\n        <p class=\"question-caption\" ng-if=\"question.caption\">{{question.caption}}</p>\n        <div ng-if=\"question.type === 'RATING'\" class=\"rating-input\">\n            <input type=\"radio\" name=\"group-2\" id=\"group-2-0\" ng-value=\"5\" ng-model=\"question.answer\"/><label for=\"group-2-0\"></label>\n            <input type=\"radio\" name=\"group-2\" id=\"group-2-1\" ng-value=\"4\" ng-model=\"question.answer\"/><label for=\"group-2-1\"></label>\n            <input type=\"radio\" name=\"group-2\" id=\"group-2-2\" ng-value=\"3\" ng-model=\"question.answer\"/><label for=\"group-2-2\"></label>\n            <input type=\"radio\" name=\"group-2\" id=\"group-2-3\" ng-value=\"2\" ng-model=\"question.answer\"/><label for=\"group-2-3\"></label>\n            <input type=\"radio\" name=\"group-2\" id=\"group-2-4\" ng-value=\"1\" ng-model=\"question.answer\"/><label for=\"group-2-4\"></label>\n        </div>\n        <div ng-if=\"question.type === 'TEXT_AREA'\" class=\"textarea-input\">\n            <textarea ng-model=\"question.answer\"></textarea>\n        </div>\n        <div class=\"grade-input-container\" ng-if=\"question.type === 'GRADE'\" >\n            <div class=\"grade-input\">\n                <div ng-class=\"{'checked': question.answer >= option}\" ng-repeat=\"option in question.options track by $index\" class=\"grade-option\" ng-click=\"question.answer = $index + 1\">\n                    {{option}}    \n                </div>\n            </div>\n            <progress class=\"grade-input-progress\" value=\"{{question.answer - 1}}\" max=\"{{question.options.length - 1}}\"></progress>\n        </div>\n        <div ng-if=\"question.type === 'MULTIPLE_OPTIONS'\" class=\"multiple-input\">\n            <button ng-disabled=\"question.answer.length == question.max_options && question.answer.indexOf(option) < 0\" ng-class=\"{'checked': question.answer.indexOf(option) > -1}\" class=\"select-multiple\" ng-repeat=\"option in question.options\" ng-click=\"review.checkQuestionOptions(question, option)\">{{option}}</button>\n        </div>\n        <div ng-if=\"question.type === 'SELECT'\" class=\"\">\n            <select ng-model=\"question.answer\">\n                <option ng-repeat=\"option in question.options\">{{option}}</button>\n            </select>\n        </div>\n    </div>\n</form>";
+module.exports = "<form name=\"review.form\" class=\"no-margin\">\n    <div ng-repeat=\"question in review.data.currentQuestions track by $index\" class=\"question-container\">\n        <h4 class=\"question-title default-padding no-margin\">{{question.title}}</h6>\n        <p class=\"question-caption default-padding no-margin\" ng-if=\"question.caption\">{{question.caption}}</p>\n        <div ng-if=\"question.type === 'RATING'\" class=\"rating-input\">\n            <input type=\"radio\" name=\"group-2\" id=\"group-2-0\" ng-value=\"5\" ng-model=\"question.answer\"/><label for=\"group-2-0\"></label>\n            <input type=\"radio\" name=\"group-2\" id=\"group-2-1\" ng-value=\"4\" ng-model=\"question.answer\"/><label for=\"group-2-1\"></label>\n            <input type=\"radio\" name=\"group-2\" id=\"group-2-2\" ng-value=\"3\" ng-model=\"question.answer\"/><label for=\"group-2-2\"></label>\n            <input type=\"radio\" name=\"group-2\" id=\"group-2-3\" ng-value=\"2\" ng-model=\"question.answer\"/><label for=\"group-2-3\"></label>\n            <input type=\"radio\" name=\"group-2\" id=\"group-2-4\" ng-value=\"1\" ng-model=\"question.answer\"/><label for=\"group-2-4\"></label>\n        </div>\n        <div ng-if=\"question.type === 'TEXT_AREA'\" class=\"textarea-input\">\n            <textarea ng-model=\"question.answer\"></textarea>\n        </div>\n        <div class=\"grade-input-container\" ng-if=\"question.type === 'GRADE'\" >\n            <div class=\"grade-input\">\n                <div ng-class=\"{'checked': question.answer >= option}\" ng-repeat=\"option in question.options track by $index\" class=\"grade-option align-center-text\" ng-click=\"question.answer = $index + 1\">\n                    {{option}}    \n                </div>\n            </div>\n            <progress class=\"grade-input-progress\" value=\"{{question.answer - 1}}\" max=\"{{question.options.length - 1}}\"></progress>\n        </div>\n        <div ng-if=\"question.type === 'MULTIPLE_OPTIONS'\" class=\"multiple-input\">\n            <button ng-disabled=\"question.answer.length == question.max_options && question.answer.indexOf(option) < 0\" ng-class=\"{'checked': question.answer.indexOf(option) > -1}\" class=\"select-multiple\" ng-repeat=\"option in question.options\" ng-click=\"review.checkQuestionOptions(question, option)\">{{option}}</button>\n        </div>\n        <div ng-if=\"question.type === 'SELECT'\" class=\"\">\n            <select ng-model=\"question.answer\" class=\"select-input\">\n                <option ng-repeat=\"option in question.options\" ng-value=\"option\">{{option}}</button>\n            </select>\n        </div>\n    </div>\n</form>";
 
 /***/ }),
-/* 97 */
+/* 93 */
 /***/ (function(module, exports) {
 
-module.exports = "<html ng-app=\"OkendoChallenge\" ng-controller=\"MainController as main\">\n    <head>\n        <title>{{main.data.currentStep.name}}</title>\n        <link href=\"https://fonts.googleapis.com/css?family=Open+Sans:300,400,700\" rel=\"stylesheet\">\n    </head>\n    <body>\n        <header>\n            <div class=\"container\">\n                <h1 class=\"product-name\">{{main.data.product}}</h1>\n                <h2 class=\"current-step\">{{main.data.currentStep.name}}</h2>\n                <nav  ng-controller=\"NavController as nav\">\n                    <div class=\"nav-item\" ng-repeat=\"step in nav.data.steps\" ng-class=\"{'current': nav.data.currentStep.name === step.name, 'complete':  step.isComplete}\" ng-click=\"nav.changeSteps(step)\">\n                        <div class=\"bullet-step\"></div>\n                        {{step.name}}\n                    </div>\n                </nav>\n            </div>\n        </header>\n        <main>\n            <div id=\"main\" class=\"container\" ui-view></div>\n        </main>\n        <footer>\n            <div class=\"container\">\n                    <button id=\"main-button\" ng-click=\"main.changeStep()\" ng-disabled=\"main.data.currentStep.name === main.data.steps[main.data.steps.length - 3].name\">Next</button>\n            </div>\n        </footer>\n        <script src=\"bundle.js\"></script>\n    </body>\n</html>";
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
