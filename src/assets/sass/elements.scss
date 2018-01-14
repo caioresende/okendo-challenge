@@ -1,0 +1,57 @@
+//ELEMENTS
+
+body {
+    background: $background-color;
+    padding: 0;
+    font-family: $font;
+}
+
+header {
+    height: 135px;
+}
+
+.container {
+    width: 96%;
+    margin: 0 2%;
+    
+    @include for-tablet-landscape-up {
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+
+/* MAIN CONTENT STYLING */
+
+#main {
+    width: 100%;
+    margin: 80px auto;
+}
+
+//DEFAULT STYLES
+.default-padding {
+    padding-bottom: $default-padding-text/2;
+
+    @include for-tablet-landscape-up {
+        padding-bottom: $default-padding-text;
+    }
+}
+
+.drop-shadow {
+    box-shadow: $default-shadow;
+}
+
+.round-corners {
+    border-radius: $default-border-radius;
+}
+
+.align-center-text {
+    text-align: center;
+}
+
+.white-bg {
+    background: white;
+}
+
+.no-margin {
+    margin: 0;
+}

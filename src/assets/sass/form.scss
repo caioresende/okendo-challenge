@@ -1,0 +1,82 @@
+/* QUESTIONS */
+
+form {
+    padding: 24px;
+}
+
+.question-container {
+    width: 100%;
+    margin-top: 36px;
+}
+
+.question-container:first-child {
+    margin-top: 0;
+}
+
+/* TEXTAREA */
+
+.textarea-input textarea {
+    width: 100%;
+    height: 140px;
+    max-width: 100%;
+    border: solid 1px rgb(235,235,235);
+    font-size: 0.8em;
+    font-family: Open Sans;
+    outline: 0;
+}
+
+/* MULTIPLE SELECT */
+
+.multiple-input {
+    display: flex;
+    flex-direction: row;
+}
+.select-multiple {
+    background:rgb(235,235,235);
+    padding: 12px;
+    margin: 0 12px 0 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.select-multiple:active {
+    color: black;
+}
+
+.select-multiple:disabled, #main-button:disabled {
+    cursor: not-allowed;
+    background:rgb(235,235,235);
+    color: $gray-color;
+    box-shadow: 0 0 0;
+}
+
+/* SELECT */
+.select-input {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 36px;
+    padding: 0 12px;
+    font-family: Open Sans;
+    font-size: 0.8em;
+    box-shadow: 0 0 0;
+    border: solid 1px rgba(0,0,0,0.2);
+    background: white;
+    background-image: url(https://image.flaticon.com/icons/svg/25/25756.svg);
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: 180px center;
+    outline: none;
+}
+
+/* FOOTER */
+
+#main-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: $green-color;
+    font-size: 1.2em;
+    color: white;
+}

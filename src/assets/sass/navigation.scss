@@ -1,0 +1,44 @@
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .nav-item {
+        outline: 0;
+        color: $gray-color;
+
+        .bullet-step {
+            margin: 20px auto 10px auto;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+
+            @include for-tablet-landscape-up {
+                margin: 0 auto 10px auto;
+            }
+        }
+    }
+
+    & .current {
+        color: black;  
+
+        .bullet-step {
+            background: $green-color;
+        }
+    }
+
+    & .complete {
+
+        .bullet-step {
+            background: $green-color;
+
+            &::before {
+                content: "\2713";
+                color: white;
+                font-weight: 700;
+                font-size: 1.3em;  
+            }
+        }
+    }
+}

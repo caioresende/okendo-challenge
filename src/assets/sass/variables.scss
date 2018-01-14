@@ -1,0 +1,31 @@
+// COLORING
+$green-color:  rgb(146, 188,79);
+$yellow-color:  rgb(245, 179, 1);
+$gray-color: rgb(161, 161, 161);
+$background-color: rgb(244,244,244);
+
+//TYPOGRAPHY
+$font: 'Open Sans', sans-serif;
+$default-padding-text: 20px;
+
+//EFFECTS
+$default-shadow: 0 0 5px rgba(0,0,0,0.2);
+$default-border-radius: 4px;
+$default-transition: all 0.3s ease;
+
+//RESPONSIVINESS
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
