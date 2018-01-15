@@ -1,42 +1,55 @@
 <div ng-repeat="question in review.data.currentQuestions track by $index" class="question-container">
-    <h4 class="question-title default-padding no-margin">{{question.title}} <span ng-if="question.required" class="required-question">*</span></h6>
-    <p class="question-caption default-padding no-margin" ng-if="question.caption">{{question.caption}}</p>
-    <div class="rating-container">
-        <div ng-if="question.type === 'RATING'" class="rating-input">
-            <input role="radio" type="radio" name="rating_{{$index}}" id="group-2-0" ng-value="5" ng-model="question.answer" ng-required="question.required"/><label for="group-2-0"></label>
-            <input role="radio" type="radio" name="rating_{{$index}}" id="group-2-1" ng-value="4" ng-model="question.answer" ng-required="question.required"/><label for="group-2-1"></label>
-            <input role="radio" type="radio" name="rating_{{$index}}" id="group-2-2" ng-value="3" ng-model="question.answer" ng-required="question.required"/><label for="group-2-2"></label>
-            <input role="radio" type="radio" name="rating_{{$index}}" id="group-2-3" ng-value="2" ng-model="question.answer" ng-required="question.required"/><label for="group-2-3"></label>
-            <input role="radio" type="radio" name="rating_{{$index}}" id="group-2-4" ng-value="1" ng-model="question.answer" ng-required="question.required"/><label for="group-2-4"></label>
+    <h4 aria-label="Question Title number {{$index + 1}}: {{question.title}}" class="question-title default-padding no-margin">{{question.title}} <span ng-if="question.required" class="required-question">*</span></h6>
+    <p aria-label="Question caption: {{question.caption}}" class="question-caption default-padding no-margin" ng-if="question.caption">{{question.caption}}</p>
+    <div class="rating-container" ng-if="question.type === 'RATING'">
+        <div class="rating-input">
+            <input type="radio" name="rating_{{$index}}" id="rating_{{$index}}_1" ng-value="1" ng-model="question.answer" ng-required="question.required"/><label tabindex="{{$index + 1}}" for="rating_{{$index}}_1" role="button" aria-label="Rate 5 stars"></label>
+            <input type="radio" name="rating_{{$index}}" id="rating_{{$index}}_2" ng-value="2" ng-model="question.answer" ng-required="question.required"/><label tabindex="{{$index + 2}}" for="rating_{{$index}}_2" role="button" aria-label="Rate 4 stars"></label>
+            <input type="radio" name="rating_{{$index}}" id="rating_{{$index}}_3" ng-value="3" ng-model="question.answer" ng-required="question.required"/><label tabindex="{{$index + 3}}" for="rating_{{$index}}_3" role="button" aria-label="Rate 3 stars"></label>
+            <input type="radio" name="rating_{{$index}}" id="rating_{{$index}}_4" ng-value="4" ng-model="question.answer" ng-required="question.required"/><label tabindex="{{$index + 4}}" for="rating_{{$index}}_4" role="button" aria-label="Rate 2 stars"></label>
+            <input type="radio" name="rating_{{$index}}" id="rating_{{$index}}_5" ng-value="5" ng-model="question.answer" ng-required="question.required"/><label tabindex="{{$index + 5}}" for="rating_{{$index}}_5" role="button" aria-label="Rate 1 star"></label>
         </div>
-        <div class="errors-container" ng-messages="main.form['rating_' + $index].$error" ng-show="main.form.$submitted">
+        <div class="errors-container" ng-messages="main.form['rating_' + $index].$error" ng-show="main.form.$submitted || main.form['rating_' + $index].$touched">
             <p class="error-message" ng-message="required">Providing a rating is mandatory</p>
         </div>
     </div>
     <div ng-if="question.type === 'TEXT_AREA'" class="textarea-input">
-        <textarea name="text_area_{{$index}}" ng-model="question.answer" ng-required="question.required"></textarea>
+        <textarea tabindex="{{$index + 4}}" aria-label="Text area for {{question.title}}" name="text_area_{{$index}}" ng-model="question.answer" ng-required="question.required"></textarea>
         <div class="errors-container" ng-messages="main.form['text_area_' + $index].$error" ng-show="main.form.$submitted || main.form['text_area_' + $index].$touched">
             <p class="error-message" ng-message="required">Providing a message is mandatory.</p>
         </div>
     </div>
-    <div class="grade-input-container" ng-if="question.type === 'GRADE'" >
-        <div class="grade-input">
-            <div ng-class="{'checked': question.answer >= option}" ng-repeat="option in question.options track by $index" class="grade-option align-center-text" ng-click="question.answer = $index + 1">
-                {{option}}    
+    <div ng-if="question.type === 'GRADE'" >
+        <div class="grade-input-container">
+            <div class="grade-input">
+                <div aria-label="{{question.title}}: Grade {{option}}" role="button" ng-class="{'checked': question.answer >= option}" ng-repeat="option in question.options track by $index" class="grade-option align-center-text" ng-click="question.answer = $index + 1">
+                    {{option}}    
+                </div>
             </div>
+            <progress class="grade-input-progress" value="{{question.answer - 1}}" max="{{question.options.length - 1}}"></progress>
         </div>
-        <progress class="grade-input-progress" value="{{question.answer - 1}}" max="{{question.options.length - 1}}"></progress>
+        <input type="hidden" ng-model="question.answer" name="grade_{{$index}}"  ng-required="question.required" />
+            <div class="errors-container" ng-messages="main.form['grade_' + $index].$error" ng-show="main.form.$submitted || main.form['grade_' + $index].$touched">
+                <p class="error-message" ng-message="required">Providing a grade is mandatory.</p>
+            </div>
     </div>
-    <div ng-if="question.type === 'MULTIPLE_OPTIONS'" class="multiple-input">
-        <button role="checkbox" ng-disabled="question.answer.length == question.max_options && question.answer.indexOf(option) < 0" ng-class="{'checked': question.answer.indexOf(option) > -1}" class="select-multiple" ng-repeat="option in question.options" ng-click="review.checkQuestionOptions(question, option)">{{option}}</button>
+    <div ng-if="question.type === 'MULTIPLE_OPTIONS'">
+        <div class="multiple-input">
+            <button aria-label="{{question.title}}: Option {{option}}" type="button" ng-disabled="review.checkForMaxOptions(question, option)" ng-class="{'checked': question.answer.indexOf(option) > -1}" class="select-multiple" ng-repeat="option in question.options" ng-click="review.checkQuestionOptions(question, option)" ng-keypress="review.checkQuestionOptions(question, option)">{{option}}</button>
+            <input ng-show="false" type="text" ng-model="question.answer" name="multiple_options_{{$index}}"  ng-required="question.required" />
+        </div>
+        <div class="errors-container" ng-messages="main.form['multiple_options_' + $index].$error" ng-show="main.form.$submitted || main.form['multiple_options_' + $index].$touched">
+            <p class="error-message" ng-message="required">Providing option(s) is mandatory.</p>
+        </div>
     </div>
     <div ng-if="question.type === 'SELECT'">
-        <select ng-model="question.answer" name="select_{{$index}}" class="select-input" ng-required="question.required">
+        <select aria-label="{{question.title}}" ng-model="question.answer" name="select_{{$index}}" class="select-input" ng-required="question.required">
             <option ng-repeat="option in question.options" ng-value="option">{{option}}</button>
         </select>
-        <div class="errors-container" ng-messages="main.form['select_' + $index].$error" ng-show="main.form.$submitted">
-            <p class="error-message" ng-message="required">Providing a Country is mandatory.</p>
+        <div class="errors-container" ng-messages="main.form['select_' + $index].$error" ng-show="main.form.$submitted || main.form['select_' + $index].$touched">
+            <p class="error-message" ng-message="required">Providing a selection is mandatory.</p>
         </div>
     </div>
 </div>
-<p class="question-caption">All fields marked with an <span class="required-question">*</span> are required</p>
+<p class="question-caption" ng-show="review.data.currentQuestions.length">All fields marked with an <span class="required-question">*</span> are required</p>
+<p class="question-caption" ng-show="!review.data.currentQuestions.length">This step has no questions yet.</p>
