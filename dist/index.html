@@ -13,7 +13,7 @@
                 <h1 class="product-name no-margin">{{main.data.product}}</h1>
                 <h2 class="current-step default-padding no-margin">{{main.data.currentStep.name}}</h2>
                 <nav  ng-controller="NavController as nav">
-                    <div class="nav-item no-margin" ng-repeat="step in nav.data.steps" ng-class="{'current': nav.data.currentStep.name === step.name, 'complete':  step.isComplete}" ng-click="nav.changeSteps(step)">
+                    <div aria-label="Navigate to {{step.name}}" class="nav-item no-margin" ng-repeat="step in nav.data.steps" ng-class="{'current': nav.data.currentStep.name === step.name, 'complete':  step.isComplete}" ng-click="nav.changeSteps(step)">
                         <div class="bullet-step drop-shadow white-bg"></div>
                         {{step.name}}
                     </div>
@@ -25,7 +25,7 @@
                 <div id="main" class="container drop-shadow round-corners white-bg" ui-view></div>
             </main>
             <footer>
-                <button type="submit" id="main-button" class="round-corners align-center-text" ng-disabled="main.form.$submitted && main.form.$invalid">Next</button>
+                <button tabindex="20" role="button" type="submit" id="main-button" class="round-corners align-center-text" ng-disabled="main.form.$submitted && main.form.$invalid || main.data.currentStep.name === main.data.steps[main.data.steps.length - 1].name">Next</button>
             </footer>
         </form>
         <script src="bundle.js"></script>
