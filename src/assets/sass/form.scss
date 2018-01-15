@@ -1,12 +1,12 @@
 /* QUESTIONS */
 
-form {
-    padding: 24px;
-}
-
 .question-container {
     width: 100%;
     margin-top: 36px;
+}
+
+.required-question {
+    color: $red-color;
 }
 
 .question-container:first-child {
@@ -22,7 +22,10 @@ form {
     border: solid 1px rgb(235,235,235);
     font-size: 0.8em;
     font-family: Open Sans;
-    outline: 0;
+
+    &.ng-invalid.ng-touched {
+        border: solid 1px $red-color;
+    }
 }
 
 /* MULTIPLE SELECT */
@@ -67,7 +70,14 @@ form {
     background-size: 12px 12px;
     background-repeat: no-repeat;
     background-position: 180px center;
-    outline: none;
+}
+
+.errors-container {
+    
+    .error-message {
+        font-size: 0.7em;
+        color: $red-color;
+    }
 }
 
 /* FOOTER */

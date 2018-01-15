@@ -7,16 +7,23 @@ header {
   height: 135px; }
 
 .container {
-  width: 750px !important;
-  height: auto;
-  margin: 0 auto; }
+  width: 96%;
+  margin: 0 2%; }
+  @media (min-width: 900px) {
+    .container {
+      width: 750px;
+      margin: 0 auto; } }
 
 /* MAIN CONTENT STYLING */
 #main {
-  width: 100%; }
+  width: 100%;
+  margin: 80px auto; }
 
 .default-padding {
-  padding: 0 0 20px 0; }
+  padding-bottom: 10px; }
+  @media (min-width: 900px) {
+    .default-padding {
+      padding-bottom: 20px; } }
 
 .drop-shadow {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
@@ -37,21 +44,33 @@ header {
   padding: 20px 0;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1em;
   color: #a1a1a1; }
+  @media (min-width: 900px) {
+    .product-name {
+      font-size: 1.2em; } }
 
 .current-step {
   font-weight: 500;
-  font-size: 1.5em; }
+  font-size: 1.3em; }
+  @media (min-width: 900px) {
+    .current-step {
+      font-size: 1.5em; } }
 
 .question-title {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 500; }
+  @media (min-width: 900px) {
+    .question-title {
+      font-size: 0.9em; } }
 
 .question-caption {
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 100;
   color: #a1a1a1; }
+  @media (min-width: 900px) {
+    .question-caption {
+      font-size: 0.8em; } }
 
 nav {
   width: 100%;
@@ -62,10 +81,13 @@ nav {
     outline: 0;
     color: #a1a1a1; }
     nav .nav-item .bullet-step {
-      margin: 0 auto 10px auto;
+      margin: 20px auto 10px auto;
       width: 30px;
       height: 30px;
       border-radius: 50%; }
+      @media (min-width: 900px) {
+        nav .nav-item .bullet-step {
+          margin: 0 auto 10px auto; } }
   nav .current {
     color: black; }
     nav .current .bullet-step {
@@ -160,7 +182,10 @@ form {
 .rating-input label::before {
   content: "\2605";
   padding: 5px;
-  font-size: 2em; }
+  font-size: 1.7em; }
+  @media (min-width: 900px) {
+    .rating-input label::before {
+      font-size: 2em; } }
 
 .rating-input label {
   color: #ccc; }

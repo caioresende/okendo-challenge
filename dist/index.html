@@ -20,14 +20,14 @@
                 </nav>
             </div>
         </header>
-        <main class="container">
-            <div id="main" class="container drop-shadow round-corners white-bg" ui-view></div>
-        </main>
-        <footer>
-            <div class="container">
-                    <button id="main-button" class="round-corners align-center-text" ng-click="main.changeStep()" ng-disabled="main.data.currentStep.name === main.data.steps[main.data.steps.length - 3].name">Next</button>
-            </div>
-        </footer>
+        <form novalidate name="main.form" ng-submit="main.submitForm()" class="container">
+            <main>
+                <div id="main" class="container drop-shadow round-corners white-bg" ui-view></div>
+            </main>
+            <footer>
+                <button type="submit" id="main-button" class="round-corners align-center-text" ng-disabled="main.form.$submitted && main.form.$invalid">Next</button>
+            </footer>
+        </form>
         <script src="bundle.js"></script>
     </body>
 </html>
