@@ -5,11 +5,6 @@ module.exports = function(ReviewService) {
         name: 'Review',
         isComplete: false
     };
-
-    var resetForm = function() {
-        self.form.$setPristine();
-    }
-
     this.data = ReviewService;
 
     ReviewService.setCurrentStep(currentStep);
@@ -18,7 +13,7 @@ module.exports = function(ReviewService) {
        if (self.form.$valid) {
             ReviewService.isStepComplete();
             ReviewService.setCurrentStep();
-            resetForm();
+            self.form.$setPristine();   
        }
     };
 };

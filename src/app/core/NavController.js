@@ -1,4 +1,4 @@
-module.exports = function(ReviewService) {
+module.exports = function($scope, ReviewService) {
     
     var self = this;
 
@@ -6,7 +6,12 @@ module.exports = function(ReviewService) {
     
 
     this.changeSteps = function(step) {
-        ReviewService.isStepComplete();
-        ReviewService.setCurrentStep(step);
+        if ($scope.$parent.main.form.$valid) {
+            ReviewService.isStepComplete();
+            ReviewService.setCurrentStep(step);
+            self.form.$setPristine();
+       } else {
+        $scope.$parent.main.form.$submitted = true;
+       }
     };
 };
